@@ -1,5 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #18191c;
+    overflow-y: hidden;
+    font-family: 'Fira Code', monospace;
+}
+
+/*---------------- NAVBAR ----------------*/
+
+.Navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+.Navbar h1 {
+    font-size: 150%;
+    color: hsl(340, 100%, 50%);
+}
+.Navbar .Links {
+    margin-left: auto;
+}
+.Navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+}
+.Navbar a:hover {
+    color: hsl(340, 100%, 50%);
+}
+
+/*---------------- MAIN ----------------*/
+
+
+
+/*---------------- MODE TOGGLE ----------------*/
+
 .ModeToggle {
     position: absolute;
     top: 1%;

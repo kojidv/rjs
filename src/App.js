@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import styled from 'styled-components';
+/* import styled from 'styled-components'; */
 import Main from './Main';
 import Navbar from './Navbar';
 import ModeToggle from './ModeToggle';
 
-let AppDiv;
+/* let AppDiv; */
 
 function App() {
 
     const [isToggled, setIsToggled] = useState(false);
-
+    /*
     if(isToggled === false) {
         AppDiv = styled.div`
             * {
@@ -20,10 +20,6 @@ function App() {
                 color: #18191c;
                 overflow-y: hidden;
                 font-family: 'Fira Code', monospace;
-            }
-            body {
-                background-color: #f0f0f0;
-                color: #18191c;
             }
             .Navbar {
                 padding: 20px;
@@ -60,10 +56,6 @@ function App() {
                 overflow-y: hidden;
                 font-family: 'Fira Code', monospace;
             }
-            body {
-                background-color: #18191c;
-                color: #f0f0f0;
-            }
             .Navbar {
                 padding: 20px;
                 display: flex;
@@ -89,20 +81,21 @@ function App() {
             }
         `
     }
+    */
 
     return (
-        <AppDiv>
+        <App>
             <Navbar />
             <Main />
             <ModeToggle 
                 isToggled={isToggled} 
                 onToggle={() =>  {
-                    setIsToggled(!isToggled).then(() => {
+                    setIsToggled(!isToggled)/*.then(() => {
                         console.log(AppDiv);
-                    })
+                    })*/
                 }}
             />
-        </AppDiv>
+        </App>
     );
 }
 
