@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
+/*---------------- BODY --- LIGHT ----------------*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,9 +10,17 @@
     color: #18191c;
     overflow-y: hidden;
     font-family: 'Fira Code', monospace;
+    transition: all .5s;
 }
 
-/*---------------- NAVBAR ----------------*/
+/*---------------- BODY --- DARK ----------------*/
+
+.ToggleSwitch input:checked + * {
+    background-color: #18191c;
+    color: #f0f0f0;
+}
+
+/*---------------- NAVBAR --- LIGHT ----------------*/
 
 .Navbar {
     padding: 20px;
@@ -19,6 +29,7 @@
     max-width: 600px;
     margin: 0 auto;
     border-bottom: 1px solid #e0e0e0;
+    transition: all .5s;
 }
 .Navbar h1 {
     font-size: 150%;
@@ -34,6 +45,12 @@
 }
 .Navbar a:hover {
     color: hsl(340, 100%, 50%);
+}
+
+/*---------------- NAVBAR --- DARK ----------------*/
+
+.ToggleSwitch input:checked + .Navbar {
+    border-bottom: 1px solid #0f0f0f;
 }
 
 /*---------------- MAIN ----------------*/

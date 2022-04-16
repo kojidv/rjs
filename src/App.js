@@ -90,9 +90,7 @@ function App() {
             <ModeToggle 
                 isToggled={isToggled} 
                 onToggle={() =>  {
-                    setIsToggled(!isToggled)/*.then(() => {
-                        console.log(AppDiv);
-                    })*/
+                    setIsToggled(!isToggled)
                 }}
             />
         </App>
