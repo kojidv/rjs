@@ -19,7 +19,9 @@ function App() {
             <div className="Components">
                 <Navbar />
                 <Main />
-                <Tools />
+                <div id="tools">
+                    <Tools />
+                </div>
                 <ToTop />
                 <div className="ModeToggle">
                     <label className="ToggleSwitch">
