@@ -3,8 +3,8 @@ const Navbar = () => {
         <nav className="Navbar">
             <h1>Kōji</h1>
             <div className="Links">
-                <a href="/">Home</a>
-                <a href="/">Tools</a>
+                <a href="#top">Home</a>
+                <a href="#tools">Tools</a>
                 <a href="/">Projects</a>
                 <a href="/">Socials</a>
             </div>

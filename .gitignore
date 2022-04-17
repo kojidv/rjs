@@ -2,4 +2,5 @@
 /coverage
 /build
 npm-debug.log*
-webpack.config.js
+package-lock.json
+package.json

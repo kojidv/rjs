@@ -1,67 +1,170 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
-/*---------------- BODY --- LIGHT ----------------*/
+:root {
+    --background: #f0f0f0;
+    --accent: #e0e0e0;
+    --text-primary: #18191c;
+    --text-secondary: hsl(340, 100%, 50%);
+}
+
+[data-theme='dark'] {
+    --background: #1b1b1b;
+    --accent: #2b2b2b;
+    --text-primary: #f0f0f0;
+    --text-secondary: hsl(340, 100%, 65%);
+}
+
+
+/*--------------------------------*/
+
+
+.App {
+    height: 300vh;
+    background-color: var(--background);
+}
+
 
 * {
+    scroll-behavior: smooth;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #18191c;
-    overflow-y: hidden;
+    background-color: var(--background);
+    color: var(--text-primary);
     font-family: 'Fira Code', monospace;
-    transition: all .5s;
+    transition: all .3s;
 }
 
-/*---------------- BODY --- DARK ----------------*/
 
-.ToggleSwitch input:checked + * {
-    background-color: #18191c;
-    color: #f0f0f0;
-}
+/*--------------------------------*/
 
-/*---------------- NAVBAR --- LIGHT ----------------*/
 
 .Navbar {
-    padding: 20px;
     display: flex;
+    padding: 20px;
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
-    border-bottom: 1px solid #e0e0e0;
-    transition: all .5s;
+    border-bottom: 1px solid var(--accent);
+    transition: all .3s;
 }
+
 .Navbar h1 {
+    cursor: default;
     font-size: 150%;
-    color: hsl(340, 100%, 50%);
+    color: var(--text-secondary);
 }
+
 .Navbar .Links {
     margin-left: auto;
 }
+
 .Navbar a {
     margin-left: 16px;
     text-decoration: none;
     padding: 6px;
+    transition: all .3s;
 }
+
 .Navbar a:hover {
-    color: hsl(340, 100%, 50%);
+    color: var(--text-secondary);
 }
 
-/*---------------- NAVBAR --- DARK ----------------*/
 
-.ToggleSwitch input:checked + .Navbar {
-    border-bottom: 1px solid #0f0f0f;
+/*--------------------------------*/
+
+
+.Main {
+    max-width: 100%;
+    display: block;
+    position: absolute;
+    padding: 0;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
 }
 
-/*---------------- MAIN ----------------*/
+.Main h3 {
+    display: block;
+    text-align: center;
+    border-bottom: 2px solid var(--accent);
+}
+
+.Main h3 span {
+    cursor: default;
+    color: var(--text-primary);
+    font-size: 40px;
+    transition: all .3s;
+}
+
+.Main h3 span:hover {
+    color: var(--text-secondary);
+}
+
+.Main h3 #K {
+    color: var(--text-secondary);
+    transition: all .3s;
+}
+
+.Main h4 {
+    text-align: center;
+}
+
+.Main h4 span {
+    cursor: default;
+    color: var(--text-primary);
+    font-size: 30px;
+    transition: all .3s;
+}
+
+.Main h4 span:hover {
+    color: var(--text-secondary);
+}
 
 
+/*--------------------------------*/
 
-/*---------------- MODE TOGGLE ----------------*/
+
+.Tools {
+    display: flex;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.Tools h3 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid var(--accent);
+    transition: all .3s;
+}
+
+.Tools h3 span {
+    cursor: default;
+    transition: all .3s;
+}
+
+.Tools h3 span:hover {
+    color: var(--text-secondary);
+}
+
+.Tools .ToolLinks {
+    margin-left: auto;
+}
+
+
+/*--------------------------------*/
+
 
 .ModeToggle {
-    position: absolute;
-    top: 1%;
+    position: fixed;
+    top: 99%;
+    transform: translateY(-99%);
     left: .5%;
 }
 
@@ -70,7 +173,7 @@
     display: inline-block;
     width: 60px;
     height: 34px;
-    border-radius: 20px;
+    border: none;
 }
 
 .ToggleSwitch input {
@@ -86,8 +189,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #18191c;
-    transition: all .5s;
+    background-color: var(--text-primary);
+    border: 0px solid var(--text-primary);
+    border-radius: 20px;
+    transition: all .3s;
 }
 
 .Slider:before {
@@ -98,15 +203,41 @@
     left: 4px;
     top: 4px;
     border-radius: 20px;
-    background-color: #f0f0f0;
-    transition: all .5s;
+    background-color: var(--background);
+    transition: all .3s;
+}
+
+.Slider:hover {
+    background-color: var(--text-secondary);
 }
 
 .ToggleSwitch input:checked + .Slider:before {
     transform: translateX(26px);
-    background-color: #18191c;
 }
 
-.ToggleSwitch input:checked + .Slider {
-    background-color: #f0f0f0;
+
+/*--------------------------------*/
+
+
+.ToTop {
+    position: fixed;
+    top: 2%;
+    left: .5%;
+}
+
+.ToTop a button {
+    cursor: pointer;
+    font-size: 15px;
+    background-color: var(--text-primary);
+    color: var(--background);
+    text-align: center;
+    text-decoration: none;
+    border: 0px solid var(--background);
+    border-radius: 15px;
+    padding: 10px;
+    transition: all .3s;
+}
+
+.ToTop a button:hover {
+    background-color: var(--text-secondary)
 }
