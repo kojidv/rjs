@@ -3,6 +3,7 @@ import useLocalStorage from 'use-local-storage';
 import Main from './Main';
 import Navbar from './Navbar';
 import Tools from './Tools';
+import Projects from './Projects';
 import ToTop from './ToTop';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
                 <Main />
                 <div id="tools">
                     <Tools />
+                </div>
+                <div id="projects">
+                    <Projects />
                 </div>
                 <ToTop />
                 <div className="ModeToggle">
