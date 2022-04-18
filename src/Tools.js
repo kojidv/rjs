@@ -85,7 +85,7 @@ const Tools = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#"> {/* eslint-disable-line */}
                             <DiTerminal style={iconStyles} />
                         </a>
                     </li>
